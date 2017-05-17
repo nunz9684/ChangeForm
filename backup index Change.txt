@@ -1,0 +1,311 @@
+<form method="post" action="http://localhost:81/save_change.php"> <br>
+  <table width="500" border="1" style="width: 500px">
+    <tbody>
+	
+      <tr>
+        <td> &nbsp;Template</td>
+		<td>
+          <select name="Template" id="Template">
+            <option value="Emergency Template">Emergency Template</option>
+            <option value="General Template">General Template</option>
+          </select>
+		</td>
+        </td>
+      </tr>
+
+      <tr>
+       <td> &nbsp;Workflow</td>
+       <td>
+          <select name="Workflow" id="Workflow">
+            <option value="SDEmergency">SDEmergency</option>
+            <option value="SDGeneral">SDGeneral</option>
+          </select>
+		</td>
+      </tr>
+	  
+      <tr>
+        <td> &nbsp;Change Requester</td>
+        <td><input name="ChangeRequester" type="text" id="txtConPassword">
+        </td>
+      </tr>
+	  
+      <tr>
+        <td>&nbsp;Group</td>
+		<td>
+          <select name="Group" id="Group">
+            <option value="Hardware Problem">Hardware Problem</option>
+            <option value="Network">Network</option>
+			<option value="Printer Problem">Printer Problem</option>
+          </select>
+		</td>
+      </tr>
+	  
+      <tr>
+        <td> &nbsp;Change Type</td>
+        <td>
+          <select name="ChangeType" id="ChangeType">
+            <option value="Major">Major</option>
+            <option value="Minor">Minor</option>
+			<option value="Significant">Significant</option>
+            <option value="Standard">Standard</option>
+          </select>
+		</td>
+      </tr>
+		  
+	  <tr>
+        <td> &nbsp;Change Owner</td>
+        <td>
+          <select name="ChangeOwner" id="ChangeOwner">
+            <option value="administrator">administrator</option>
+            <option value="Chatchawan">Chatchawan</option>
+			<option value="Heather Graham">Heather Graham</option>
+            <option value="oward Stern">Howard Stern</option>
+          </select>
+		</td>
+      </tr>
+		  
+	  <tr>
+        <td> &nbsp;Category</td>
+        <td>
+          <select name="Category" id="Category">
+            <option value="General">General</option>
+          </select>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td> &nbsp;Change Manager</td>
+        <td>
+          <select name="ChangeManager" id="ChangeManager">
+            <option value="Administrator">Administrator</option>
+          </select>
+		</td>
+      </tr>
+  
+	  <tr>
+        <td> &nbsp;Impact</td>
+        <td>
+          <select name="Impact" id="Impact">
+            <option value="High">High</option>
+			<option value="Low">Low</option>
+			<option value="Medium">Medium</option>
+          </select>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td> &nbsp;Urgency</td>
+        <td>
+          <select name="Urgency" id="Urgency">
+            <option value="High">High</option>
+			<option value="Low">Low</option>
+			<option value="Normal">Normal</option>
+			<option value="Urgent">Urgent</option>
+          </select>
+		</td>
+      </tr>
+		  
+	  <tr>
+        <td> &nbsp;Stage</td>
+        <td>
+          <select name="Stage" id="Stage">
+            <option value="Submission">Submission</option>
+			<option value="Planning">Planning</option>
+			<option value="Approval">Approval</option>
+			<option value="Implementation">Implementation</option>
+			<option value="Review">Review</option>
+			<option value="Close">Close</option>
+          </select>
+		</td>
+      </tr>
+ 
+	  <tr>
+        <td> &nbsp;Priority</td>
+        <td>
+          <select name="Priority" id="Priority">
+            <option value="High">High</option>
+			<option value="Low">Low</option>
+			<option value="Medium">Medium</option>
+			<option value="Normal">Normal</option>
+          </select>
+		</td>
+      </tr>
+
+	  <tr>
+        <td> &nbsp;Status</td>
+        <td>
+          <select name="Status" id="Status">
+            <option value="Accepted">Accepted</option>
+			<option value="Rejected">Rejected</option>
+			<option value="Requested">Requested</option>
+			<option value="Requested For Information">Requested For Information</option>
+			<option value="Submitted For Authorization">Submitted For Authorization</option>
+          </select>
+		</td>
+      </tr>
+
+	  <tr>
+        <td> &nbsp;Risk</td>
+        <td>
+          <select name="Risk" id="Risk">
+            <option value="High">High</option>
+			<option value="Low">Low</option>
+			<option value="Medium">Medium</option>
+          </select>
+		</td>
+      </tr>
+
+	  <tr>
+        <td> &nbsp;Status Comments</td>
+        <td><input name="StatusComments" type="text" id="StatusComments">
+        </td>
+      </tr>
+  
+	  <tr>
+        <td> &nbsp;Schedule Start</td>
+        <td>
+          <select name='sD1' id='sD1'>
+<?php								
+			for($i=1;$i<=31;$i++){
+				$i2=sprintf("%02d",$i); 
+				echo '<option value="'.$i2.'">'.$i2.'</option>';
+			 }
+			 
+?>
+			</select>
+			 <select name="sM1" id="sM1">
+            <option value="Jan">Jan</option>
+			<option value="Feb">Feb</option>
+			<option value="Mar">Mar</option>
+			<option value="Apr">Apr</option>
+			<option value="May">May</option>
+			<option value="Jun">Jun</option>
+			<option value="Jul">Jul</option>
+			<option value="Aug">Aug</option>
+			<option value="Sep">Sep</option>
+			<option value="Oct">Oct</option>
+			<option value="Nov">Nov</option>
+			<option value="Dec">Dec</option>
+			</select>
+			<select name='sY1' id='sY1'>
+<?php
+			for($i=2017;$i<=2100;$i++){
+				echo '<option value="'.$i.'">'.$i.'</option>';
+			}
+?>
+			</select>
+			
+			
+			<select name='sHr1' id='sHr1'>
+<?php
+			for($i=0;$i<=23;$i++){
+				$i2=sprintf("%02d",$i); 
+				echo '<option value="'.$i2.'">'.$i2.'</option>';
+			 }
+?>
+			</select>
+			
+			<select name='sMi1' id='sMi1'>
+<?php
+			for($i=0;$i<=59;$i++){
+				$i2=sprintf("%02d",$i); 
+				echo '<option value="'.$i2.'">'.$i2.'</option>';
+			 }
+?>
+			</select>
+						
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td> &nbsp;Schedule End</td>
+        <td>
+          <select name='eD1' id='eD1'>
+<?php								
+			for($i=1;$i<=31;$i++){
+				$i2=sprintf("%02d",$i); 
+				echo '<option value="'.$i2.'">'.$i2.'</option>';
+			 }
+			 
+?>
+			</select>
+			
+			<select name="eM1" id="eM1">
+            <option value="Jan">Jan</option>
+			<option value="Feb">Feb</option>
+			<option value="Mar">Mar</option>
+			<option value="Apr">Apr</option>
+			<option value="May">May</option>
+			<option value="Jun">Jun</option>
+			<option value="Jul">Jul</option>
+			<option value="Aug">Aug</option>
+			<option value="Sep">Sep</option>
+			<option value="Oct">Oct</option>
+			<option value="Nov">Nov</option>
+			<option value="Dec">Dec</option>
+			</select>
+			
+			<select name='eY1' id='eY1'>
+<?php
+			for($i=2017;$i<=2100;$i++){
+				echo '<option value="'.$i.'">'.$i.'</option>';
+			}
+?>
+			</select>
+		
+			<select name='eHr1' id='eHr1'>
+<?php
+			for($i=0;$i<=23;$i++){
+				$i2=sprintf("%02d",$i); 
+				echo '<option value="'.$i2.'">'.$i2.'</option>';
+			 }
+?>
+			</select>
+			
+			<select name='eMi1' id='eMi1'>
+<?php
+			for($i=0;$i<=59;$i++){
+				$i2=sprintf("%02d",$i); 
+				echo '<option value="'.$i2.'">'.$i2.'</option>';
+			 }
+?>
+			</select>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td> &nbsp;ServicesAffected</td>
+        <td>
+          <select name="ServicesAffected" id="ServicesAffected">
+            <option value="Application Login">Application Login</option>
+          </select>
+		</td>
+      </tr>
+	  
+	      <tr>
+        <td> &nbsp;Title</td>
+        <td><input name="Title" type="text" id="Title">
+        </td>
+      </tr>
+	  
+	  	  <tr>
+        <td> &nbsp;Reason For Change</td>
+        <td>
+          <select name="ReasonForChange" id="ReasonForChange">
+            <option value="New Service">New Service</option>
+          </select>
+		</td>
+      </tr>
+	  
+	  <tr>
+        <td> &nbsp;Description</td>
+        <td><input name="Description" type="text" id="Description">
+        </td>
+      </tr>
+	  
+    </tbody>
+  </table>
+  <br>
+  <input type="submit" name="Submit" value="Create">
+</form>
+*/?>
